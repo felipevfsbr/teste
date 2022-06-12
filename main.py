@@ -23,8 +23,13 @@ def play():
     pygame.mixer.music.load(musica)
     pygame.mixer.music.play(loops=0)
 
+#Parar Musica
+
+def parar():
+    pygame.mixer.music.stop()
+
 root = Tk()
-root.title('Mp3 Player')
+root.title('Mp3 Player, Made by Felipe Néris')
 root.iconbitmap()
 root.geometry('800x600')
 
@@ -55,12 +60,12 @@ pausa= Button(botoes_moldura, image=pausa_img, borderwidth=0)
 play= Button(botoes_moldura, image=play_img, borderwidth=0, command=play)
 voltar= Button(botoes_moldura, image=voltar_img, borderwidth=0)
 avancar= Button(botoes_moldura, image=avancar_img, borderwidth=0)
-parar= Button(botoes_moldura, image=parar_img, borderwidth=0)
+parar= Button(botoes_moldura, image=parar_img, borderwidth=0, command=parar)
 
-pausa.grid(row=0, column=0, padx=10)
-play.grid(row=0, column=1, padx=10)
-voltar.grid(row=0, column=2, padx=10)
-avancar.grid(row=0, column=3, padx=10)
+pausa.grid(row=0, column=2, padx=10)
+play.grid(row=0, column=3, padx=10)
+voltar.grid(row=0, column=0, padx=10)
+avancar.grid(row=0, column=1, padx=10)
 parar.grid(row=0, column=4, padx=10)
 
 #Criar Menu
