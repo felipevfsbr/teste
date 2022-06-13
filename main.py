@@ -6,7 +6,6 @@ from tkinter import filedialog
 # Inicializar mixer
 pygame.mixer.init()
 
-
 # Função Adicionar Musica
 def add_musica():
     musica = filedialog.askopenfilename(initialdir='/audio', title='Escolha uma Musica!',
@@ -18,7 +17,6 @@ def add_musica():
     # Adicionar Musica a lista
     song_box.insert(END, musica)
 
-
 # Tocar Musica Selecionada
 
 def play():
@@ -27,16 +25,13 @@ def play():
     pygame.mixer.music.load(musica)
     pygame.mixer.music.play(loops=0)
 
-
 # Parar Musica
 
 def parar():
     pygame.mixer.music.stop()
 
-
 # Pausa Global
 pausado = False
-
 
 # Pausar Musica
 def pausar(is_pausado):
@@ -51,11 +46,10 @@ def pausar(is_pausado):
         pygame.mixer.music.pause()
         pausado = True
 
-
 root = Tk()
 root.title('Mp3 Player, Made by Felipe Néris')
 root.iconbitmap()
-root.geometry('800x600')
+root.geometry('500x300')
 
 # Inicializando pygame mixer
 pygame.mixer.init()
